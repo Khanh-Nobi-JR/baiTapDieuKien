@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Điểm kiểm tra</th>
+        <th>Điểm giữa kỳ</th>
+        <th>Điểm cuối kỳ</th>
+    </tr>
+    <tr>
+        <td><input type="text" id="diemKtra"></td>
+        <td><input type="text" id="diemGky"></td>
+        <td><input type="text" id="diemCky"></td>
+    </tr>
+</table>
+
+<p><input type="button"onclick="xepLoai1()" value="xem loại"><span id="xepLoai"></span></p>
+<script>
+    function xepLoai1(){
+        let diemKt = Number(document.getElementById('diemKtra').value);
+        let diemGk = Number(document.getElementById('diemGky').value);
+        let diemCk = Number(document.getElementById('diemCky').value);
+        let loai = (diemKt + diemGk * 2 + diemCk * 3)/6 ;
+        if (loai >= 8.5){
+            document.getElementById('xepLoai').innerText = "xuất sắc";
+        } else if (loai > 6 && loai < 7){
+            document.getElementById('xepLoai').innerText = "trung bình";
+        } else if (loai >= 7 && loai < 8) {
+            document.getElementById('xepLoai').innerText = "giỏi";
+        } else {
+            document.getElementById('xepLoai').innerText = "yếu";
+        }
+
+    }
+
+</script>
+</body>
+</html>
