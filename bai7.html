@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai6</title>
+</head>
+<body>
+<input type="text" id="total" placeholder="thông số tổng cước">
+<p><input type="button"onclick="check()" value="check"> Tổng số tiền phải trả là: <span id="hoaHong"></span></p>
+<script>
+    function check() {
+        let a = document.getElementById('total').value;
+        if (a <= 100){
+            hh = a
+            document.getElementById('hoaHong').innerText = hh;
+        } else if (a > 100 && a < 200){
+            hh = 100 + a * (a - 100);
+            document.getElementById('hoaHong').innerText = hh;
+        } else if (a >= 200){
+            hh = 100 + (a-200)*3 + (a-100-(a-200))*2;
+            document.getElementById('hoaHong').innerText = hh;
+        } else {
+            document.getElementById('hoaHong').innerText = 'không phải trả OK, free cho bạn';
+        }
+    }
+
+</script>
+</body>
+</html>
