@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai6</title>
+</head>
+<body>
+<input type="text" id="total" placeholder="nhập tổng doanh thu(triệu)">
+<p><input type="button"onclick="check()" value="check"> hoa hồng nhận đc là (triệu): <span id="hoaHong"></span></p>
+<script>
+    function check() {
+        let a = document.getElementById('total').value;
+        if (a > 100){
+            hh = (a/100)*5;
+            document.getElementById('hoaHong').innerText = hh;
+        } else if (a > 300){
+            hh = (a/100)*10;
+            document.getElementById('hoaHong').innerText = hh;
+        } else if (a > 500){
+            hh = (a/100)*20;
+            document.getElementById('hoaHong').innerText = hh;
+        } else {
+            document.getElementById('hoaHong').innerText = 'chưa đủ điều kiện nhận hoa hồng';
+        }
+    }
+
+</script>
+</body>
+</html>
